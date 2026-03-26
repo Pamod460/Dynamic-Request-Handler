@@ -4,24 +4,29 @@ A custom ERPNext application for handling dynamic requests. This app extends ERP
 
 ### Installation
 
-#### Using bench (Recommended)
-
+1. Fetch the app from GitHub into your local Frappe bench:
 ```bash
-bench get-app dynamic-request-handler https://github.com/Pamod460/dynamic-request-handler.git
-bench install-app dynamic-request-handler
+bench get-app dynamic_request_handler https://github.com/Pamod460/dynamic-request-handler.git
 ```
 
-#### Manual Installation
-
-1. Clone the repository into your apps directory:
+2. Install the app on your specific ERPNext site:
 ```bash
-cd frappe-bench/apps
-git clone https://github.com/Pamod460/dynamic-request-handler.git dynamic-request-handler
+bench --site [your-site-name] install-app dynamic_request_handler
+```
+*(Replace `[your-site-name]` with the actual name of your site, e.g., `site1.local`)*
+
+### Uninstallation
+
+If you need to remove the app later, follow these steps:
+
+1. Uninstall the app from your ERPNext site:
+```bash
+bench --site [your-site-name] uninstall-app dynamic_request_handler
 ```
 
-2. Install the app using bench:
+2. Remove the app completely from your Frappe bench:
 ```bash
-bench install-app dynamic-request-handler
+bench remove-app dynamic_request_handler
 ```
 
 ### Requirements
